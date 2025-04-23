@@ -1,0 +1,288 @@
+.obrecz {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid; /* Grubość obręczy */
+    position: fixed; /* Ustawiamy pozycję na stałe */
+    }
+    #zielone { 
+    color: #4CAF50;
+    }
+    .obrecz.zielona {
+    border-color: rgb(41 254 146);
+    bottom: -50px; /* Przesunięcie częściowo poza dolną krawędź ekranu */
+    left: -50px; /* Przesunięcie częściowo poza lewą krawędź ekranu */
+    }
+    .obrecz.fioletowa {
+    border-color: purple;
+    top: -50px; /* Przesunięcie częściowo poza górną krawędź ekranu */
+    right: -50px; /* Przesunięcie częściowo poza prawą krawędź ekranu */
+    }
+    body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Adjust the background color if needed */
+    min-height: 100vh;
+    margin: 0;
+    }
+    a { 
+    color: rgb(41 254 146);
+    }
+    .container {
+    text-align: center;
+    }
+    h1 {
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 100px; /* równe odstępy z lewej i prawej strony */
+    margin-right: 100px; /* równe odstępy z lewej i prawej strony */
+    }
+    form {
+    background-color: #1C1C1C;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 96%;
+    margin-top: 20px;
+    }
+    .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    }
+    label {
+    display: block;
+    color: #808080;
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-left: 100px; /* równe odstępy z lewej i prawej strony */
+    margin-right: 100px; /* równe odstępy z lewej i prawej strony */
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="tel"],
+    select {
+    /* Aktualizacja poprzedniego stylu */
+    width: calc(100% - 200px); /* zmniejszamy szerokość o 20px */
+    padding: 15px; /* zwiększamy padding */
+    margin: 10px auto; /* równy odstęp na górze i dole, automatyczne wyśrodkowanie */
+    margin-left: 100px; /* równe odstępy z lewej i prawej strony */
+    margin-right: 100px; /* równe odstępy z lewej i prawej strony */
+    border: 1px solid #000;
+    border-radius: 4px; /* zwiększamy zaokrąglenie */
+    box-sizing: border-box;
+    background-color: #1C1C1C;
+    color: white; /* Ensure text is visible on dark background */
+    }
+    input[type="text"]:hover,
+    input[type="email"]:hover,
+    input[type="password"]:hover,
+    input[type="date"]:hover,
+    input[type="tel"]:hover,
+    select:hover {
+    border-color: white;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    input[type="date"]:focus,
+    input[type="tel"]:focus,
+    select:focus {
+    border-color: rgb(41 254 146);
+    outline: none;
+    }
+    .checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    }
+    .checkbox-container .checkbox-item {
+    flex: 0 0 33.33%; /* Każdy element zajmuje 1/3 szerokości */
+    margin-bottom: 10px; /* Odstęp między wierszami */
+    display: flex;
+    align-items: center;
+    }
+    .checkbox-container input[type="checkbox"] {
+    display: none; /* Ukrywamy oryginalny checkbox */
+    }
+    .checkbox-container label {
+    cursor: pointer;
+    color: white; /* Biały kolor tekstu */
+    }
+    .checkbox-container label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #808080;
+    background-color: transparent;
+    margin-right: 5px; /* Odstęp między checkboxem a tekstem */
+    vertical-align: middle; /* Wyśrodkowanie pionowe */
+    }
+    .checkbox-container input[type="checkbox"]:checked + label::before {
+    background-color: rgb(41 254 146);
+    border-color: rgb(41 254 146);
+    }
+    .checkbox-container label:hover::before {
+    border-color: rgb(41 254 146); /* Zmiana koloru obramówki po najechaniu myszką */
+    }
+    .radio-container {
+    display: flex; /* Ustawiamy na flexbox */
+    align-items: center; /* Wyśrodkowanie pionowe */
+    }
+    .radio-container input[type="radio"] {
+    display: none; /* Ukrywamy oryginalny radio button */
+    margin-right: 5px; /* Dodajemy odstęp między przyciskami */
+    }
+    .radio-container label {
+    cursor: pointer;
+    color: white; /* Biały kolor tekstu */
+    margin-right: 10px; /* Dodajemy odstęp między przyciskiem a tekstem */
+    }
+    .radio-container label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #808080;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-right: 5px; /* Odstęp między przyciskiem a tekstem */
+    margin-bottom: -5px;
+    }
+    .radio-container input[type="radio"]:checked + label::before {
+    background-color: rgb(41 254 146);
+    }
+    .radio-container label:hover::before {
+    border-color: rgb(41 254 146);
+    }
+    button {
+    background-color: #4CAF50; /* Adjust to match your theme */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 65%;
+    margin-left: 100px; /* równe odstępy z lewej i prawej strony */
+    margin-right: 100px; /* równe odstępy z lewej i prawej strony */
+    }
+    button:hover {
+    background-color: rgb(41 254 146);
+    }
+    .tile {
+    width: 600px;
+    height: 650px;
+    background-color: #1C1C1C;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+    margin-right: 100px;
+    margin-left: 300px;
+    }
+    #tlo {
+    position: absolute;
+    top: 0;
+    right: -50%; /* Ustawiamy odstęp od prawej krawędzi */
+    width: 50%; /* Szerokość obrazka */
+    height: 100%; /* Wysokość obrazka */
+    background-size: cover;
+    }
+    #logo {
+    height: 100px;
+    width: 150px;
+    margin-left: 40%; /* równe odstępy z lewej i prawej strony */
+    margin-right: 50% /* równe odstępy z lewej i prawej strony */
+    }
+    .black-bar {
+    background-color: black;
+    color: white;
+    height: 2px; /* Grubość linii */
+    width: 100%; /* Rozciągnięcie na całą szerokość */
+    margin: 10px 0; /* Mniejszy margines */
+    }
+    .loga {
+    margin-top: 20px;
+    margin-left: 150px;
+    }
+    .loga img {
+    margin: 0 -100px; /* Margines między zdjęciami */
+    }
+    h4 {
+    color: white;
+    text-align: center;
+    }
+    #zielone {
+    display: inline-block;
+    }
+    #zielone a:hover {
+    text-decoration: underline; /* Podkreślenie tekstu po najechaniu */
+    }
+    .error-message {
+    color: red;
+    margin-top: 5px; /* Dystans między inputem a komunikatem */
+    font-size: 0.8em; /* Rozmiar czcionki komunikatu */
+    margin-left: 100px;
+    }
+    #info1, #info2, #info { 
+    margin-top: 5px; /* Dystans między inputem a komunikatem */
+    font-size: 0.8em; /* Rozmiar czcionki komunikatu */
+    margin-left: 100px;
+    }
+    @media (max-width: 600px) {
+    .tile {
+    width: 100%;
+    padding: 10px;
+    }
+    .form-group {
+    margin-left: 0;
+    margin-right: 0;
+    }
+    label,
+    input,
+    button {
+    margin-left: 0;
+    margin-right: 0;
+    }
+    }
+    @media (max-width: 768px) {
+    #tlo {
+    display: none; /* Ukryj obrazek */
+    }
+    .tile {
+    width: 100%; /* Dostosuj szerokość formularza */
+    margin-left: auto;
+    margin-right: auto;
+    height: auto; /* Zmień wysokość, aby pasowała do zawartości */
+    }
+    form {
+    width: 100%; /* Dostosuj szerokość formularza */
+    padding: 10px; /* Zmniejsz padding */
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="tel"],
+    select,
+    button {
+    width: calc(100% - 20px); /* Dostosuj szerokość pól formularza */
+    margin-left: 10px; /* Dostosuj marginesy */
+    margin-right: 10px; /* Dostosuj marginesy */
+    }
+    label {
+    margin-left: 10px; /* Dostosuj marginesy */
+    margin-right: 10px; /* Dostosuj marginesy */
+    }
+    .checkbox-container .checkbox-item {
+    flex: 0 0 100%; /* Każdy element zajmuje całą szerokość */
+    }
+    .radio-container {
+    flex-direction: column; /* Ustaw radio przyciski w kolumnie */
+    align-items: flex-start; /* Wyrównaj do lewej */
+    }
+    .radio-container label {
+    margin-right: 0; /* Usuń prawy margines */
+    margin-bottom: 10px; /* Dodaj odstęp między przyciskami */
+    }
+}    

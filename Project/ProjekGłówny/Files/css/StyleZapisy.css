@@ -1,0 +1,325 @@
+/* Resetowanie marginesów i paddingu dla całego dokumentu */
+html, body, header, main, article, section {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: black;
+}    
+    html, body, main, article, section {
+    overflow: hidden visible;
+    }
+    #sekcjaczarna, #malasekcja {
+        margin: 0; /* Zlikwiduj marginesy */
+        padding: 0; /* Zlikwiduj padding */
+    }
+    textarea {
+        width: calc(100% - 200px); /* zmniejszamy szerokość o 20px */
+        padding: 15px; /* zwiększamy padding */
+        margin: 10px auto; /* równy odstęp na górze i dole, automatyczne wyśrodkowanie */
+        margin-left: 10px; /* równe odstępy z lewej i prawej strony */
+        margin-right: 100px; /* równe odstępy z lewej i prawej strony */
+        border: 1px solid #000;
+        border-radius: 4px; /* zwiększamy zaokrąglenie */
+        box-sizing: border-box;
+        background-color: #1C1C1C;
+        color: white; /* Ensure text is visible on dark background */
+      }
+      
+      textarea:focus {
+        outline: none; /* Usuwa domyślną ramkę podczas fokusu */
+        border-color: rgb(41 254 146);
+      }
+      textarea:hover {
+        border-color: white;
+        }
+    
+    #malasekcja {
+        background-color: #1C1C1C;
+        width: 100%;
+        margin-top: 0; /* Brak odstępu na górze */
+    }
+    
+    #sekcjaczarna {
+        background-color: black;
+        width: 100%;
+        margin-top: 0; /* Brak odstępu na górze */
+    }
+    .highlight-link {
+        color: white;
+        font-weight: bold; /* Pogrubienie */
+        font-size: x-large;
+        text-decoration: none; /* Usuń podkreślenie */
+        padding: 5px 10px; /* Dodanie przestrzeni wewnętrznej */
+        border-radius: 5px; /* Zaokrąglenie rogów */
+        transition: background-color 0.3s; /* Efekt płynnej zmiany koloru tła */
+    }
+
+    .highlight-link:hover {
+        color: rgb(41 254 146); /* Zmiana koloru tekstu po najechaniu */
+    }
+    .targi {
+        width: 600px;
+        height: 400px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="textarea"],
+    select {
+    /* Aktualizacja poprzedniego stylu */
+    width: calc(100% - 200px); /* zmniejszamy szerokość o 20px */
+    padding: 15px; /* zwiększamy padding */
+    margin: 10px auto; /* równy odstęp na górze i dole, automatyczne wyśrodkowanie */
+    margin-left: 10px; /* równe odstępy z lewej i prawej strony */
+    margin-right: 100px; /* równe odstępy z lewej i prawej strony */
+    border: 1px solid #000;
+    border-radius: 4px; /* zwiększamy zaokrąglenie */
+    box-sizing: border-box;
+    background-color: #1C1C1C;
+    color: white; /* Ensure text is visible on dark background */
+    }
+    input[type="text"]:hover,
+    input[type="email"]:hover,
+    input[type="password"]:hover,
+    input[type="date"]:hover,
+    input[type="tel"]:hover,
+    input[type="textarea"]:hover,
+    select:hover {
+    border-color: white;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    input[type="date"]:focus,
+    input[type="tel"]:focus,
+    input[type="textarea"]:focus,
+    select:focus {
+    border-color: rgb(41 254 146);
+    outline: none;
+    }
+    label{
+        margin-left: 15px;
+        color: rgb(41 254 146);
+    }
+    html {
+    scroll-behavior: smooth;
+    }
+    h1 { 
+    color: #0BDA51;
+    margin-left: 2%; /* Dodatkowy margines z lewej strony */
+    }
+    /* Header i Nav */
+    .logo {
+    height: 100px; /* Ustaw wysokość na odpowiednią dla Twojego logo */
+    width: auto; /* Ustaw szerokość na auto, aby proporcje były zachowane */
+    }
+    header {
+    position: fixed;
+    top: 0;
+    background-color: #1C1C1C;
+    height: 115px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 1000;
+    }
+    header::after {
+    width: 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, #7E57C2, #4CAF50, #7E57C2);
+    z-index: 1;
+    }
+    .sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Upewnij się, że jest na wierzchu */
+    }
+    nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: -100px; /* Przesunięcie linków w górę */
+    margin-right: 2%; /* Przesunięcie w prawo */
+    }
+    nav a.active {
+    color: #0b8e00 /* Kolor zielony dla aktywnego linku */
+    }
+    nav a {
+    margin-right: 2%; /* Większy odstęp między odnośnikami */
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    }
+    /* Media query dla ekranów mniejszych niż 580px */
+    @media (max-width: 580px) {
+    nav a {
+    display: none; /* Ukryj wszystkie linki */
+    }
+    nav a.nav-link.active{
+    display: inline-block; /* Wyświetl tylko potrzebne linki */
+    flex: 1; /* Pozwala linkom na równą odległość */
+    text-align: center; /* Wyrównaj tekst do środka */
+    margin-right: 0; /* Usuń odstęp między odnośnikami */
+    }
+    nav {
+    width: 100%; /* Ustaw nawigację na pełną szerokość */
+    justify-content: space-between; /* Rozłóż linki równomiernie */
+    }
+    }
+    #zielone {
+    color: rgb(41, 254, 146);
+    margin-top: 10%; /* użyj % dla responsywności */
+    margin-left: 2%; /* użyj % dla responsywności */
+    font-size: 20px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    margin-right: 2%; /* Równe odstępy od prawej krawędzi */
+    }
+    #zielone1 {
+        color: rgb(41, 254, 146);
+        margin-top: 2%; /* użyj % dla responsywności */
+        margin-left: 2%; /* użyj % dla responsywności */
+        font-size: 50px;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 700;
+        margin-right: 2%; /* Równe odstępy od prawej krawędzi */
+        }
+    #biale {
+    color: white;
+    margin-top: 2%; /* użyj % dla responsywności */
+    margin-left: 2%; /* użyj % dla responsywności */
+    font-size: 45px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    }
+    strong {
+    color: rgb(41, 254, 146);
+    font-size: x-large;
+    }
+    #mbiale {
+    color: white;
+
+    font-size: 20px;
+    font-weight: 500;
+    }
+    button {
+    margin-left: 10px;
+    margin-top: 20px; /* Odstęp między napisem a przyciskiem */
+    background-color: rgb(41, 254, 146); /* Kolor przycisku */
+    padding: 20px 70px; /* Dodajemy padding, aby przycisk był większy */
+    border: none; /* Usuwamy domyślny border */
+    cursor: pointer; /* Kursor zmienia się na pointer po najechaniu */
+    transition: background-color 0.3s, color 0.3s; /* Animacja zmiany koloru tła i 
+    tekstu */
+    border-radius: 5px; /* Zaokrąglenie rogów */
+    }
+    button:hover {
+    background-color: black; /* Po najechaniu na przycisk zmienia się kolor tła na 
+    czarny */
+    color: rgb(41, 254, 146); /* Tekst zmienia kolor na zielony */
+    }
+    
+    h2 {
+    font-size: 20px;
+    color: white;
+    margin: 10px 0;
+    }
+    p {
+    color: white;
+    margin: 0;
+    }
+    
+    /* Sekcja Footer */
+    footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000; /* Czarny kolor tła */
+    color: #fff; /* Biały kolor tekstu */
+    font-family: Arial, sans-serif; /* Nowoczesna czcionka */
+    }
+    .footer-text-and-image {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Odległość między elementami */
+    flex: 1;
+    }
+    .footer-text-and-image p {
+    margin: 0;
+    }
+    .footer-image {
+    width: 70px; /* Szerokość obrazka */
+    height: auto;
+    }
+    footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    }
+    footer ul.menu {
+    justify-content: center;
+    flex: 1;
+    }
+    footer ul.social-icon {
+    justify-content: flex-end;
+    }
+    footer ul li {
+    margin: 0 10px;
+    }
+    footer ul li a {
+    color: #fff; /* Biały kolor linków */
+    text-decoration: none;
+    font-size: 16px;
+    }
+    footer ul li a:hover {
+    color: #f0f0f0; /* Jasnoszary kolor na hover */
+    }
+    .social-icon__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333; /* Ciemnoszare tło dla ikon */
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    }
+    .social-icon__link:hover {
+    background-color: #555; /* Jaśniejsze tło na hover */
+    }
+    ion-icon {
+    color: #fff; /* Biały kolor ikon */
+    font-size: 24px;
+    }
+    #Ztekst { 
+    color: #0b8e00;
+    margin-left: 250px;
+    }
+    @media screen and (max-width: 1240px) {
+    ul, li { 
+    display: none;
+    }
+    .footer p, footer img{ 
+    text-align: center; /* Centrowanie tekstu dla mniejszych ekranów */
+    flex: 1; /* Rozciąganie tekstu na całą dostępną szerokość */
+    }
+    }
+    @media screen and (max-width: 3000px) {
+    h6 {
+    display: none;
+    }
+    }
+    
